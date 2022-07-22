@@ -1,14 +1,15 @@
 package com.springboot.todolist.service.content;
 
-import org.springframework.web.bind.annotation.PostMapping;
+import java.util.List;
+
 
 import com.springboot.todolist.web.dto.content.CreateContentReqDto;
 import com.springboot.todolist.web.dto.content.CreateContentRespDto;
+import com.springboot.todolist.web.dto.content.ReadContentRespDto;
 
 public interface ContentService {
 	
-	
-	@PostMapping("/content")
 	public CreateContentRespDto createContentRespDto(CreateContentReqDto createContentReqDto) throws Exception;
-	
+	public ReadContentRespDto readContentRespDto(int contentcode) throws Exception;
+	public List<ReadContentRespDto> readContentList(int page) throws Exception;
 }
