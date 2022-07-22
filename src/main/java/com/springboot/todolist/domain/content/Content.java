@@ -1,0 +1,20 @@
+package com.springboot.todolist.domain.content;
+
+import java.time.LocalDate;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class Content {
+	private int contentcode;
+	private String content;
+	private int usercode;
+	private LocalDate createdate;
+	private LocalDate updatedate;
+	
+}
